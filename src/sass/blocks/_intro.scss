@@ -38,6 +38,33 @@
     right: 0;
   }
 
+  .slick-dots {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+
+    li {
+      border: 2px solid black;
+      border-radius: 10px;
+      color: $white;
+      width: 15px;
+      height: 5px;
+
+      button {
+        display: none;
+      }
+
+      &:not(:last-child) {
+        margin-right: 5px;
+      }
+    }
+
+    .slick-active {
+      background-color: black;
+    }
+  }
+
   .animate__fadeIn {
     animation-delay: 1s;
   }

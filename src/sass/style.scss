@@ -10,6 +10,7 @@
 
 @import 'blocks/header';
 @import 'blocks/intro';
+@import 'blocks/tutorial';
 
 @import 'media';
 
@@ -28,4 +29,14 @@ html {
     max-width: 1140px;
     margin: 0 auto;
     padding: 0 15px;
+}
+
+.title {
+    color: $grey;
+    font-size: $title-font-size;
+    text-align: center;
+
+    &--35px {
+        font-size: $big-title-font-size;
+    }
 }

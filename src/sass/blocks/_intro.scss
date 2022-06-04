@@ -1,17 +1,41 @@
 .intro {
   padding-top: 50px;
 
-  &__title {
-    color: $grey;
-    font-size: 35px;
-    text-align: center;
-  }
-
   &__text {
     margin-top: 20px;
     color: $grey;
-    font-size: 20px;
+    font-size: $default-font-size;
     text-align: center;
+  }
+
+  &__slider {
+    position: relative;
+    margin-top: 20px;
+  }
+
+  &__slide {
+
+    img {
+      margin: 0 auto;
+      height: 200px;
+    }
+  }
+
+  .slick-arrow {
+    position: absolute;
+    border: none;
+    background-color: $white;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+  }
+
+  .slick-prev {
+    left: 0;
+  }
+
+  .slick-next {
+    right: 0;
   }
 
   .animate__fadeIn {

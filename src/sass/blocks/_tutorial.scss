@@ -1,0 +1,12 @@
+.tutorial {
+  padding-top: 50px;
+
+  &__list {
+    margin-top: 20px;
+  }
+
+  &__item {
+    color: $grey;
+    font-size: $default-font-size;
+  }
+}

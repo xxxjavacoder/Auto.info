@@ -40,32 +40,35 @@
             <div class="container">
                 <div class="col-12 col-md-6">
                     <form action="#">
-                        <div class="form-group">
-                            <label for="AutoBrand">Марка Авто</label>
-                            <select
-                                class="form-control"
-                                id="AutoBrand"
-                                required
-                            >
-                                <option disabled value="0" selected>Оберіть марку авто...</option>
-                                <option value="bmw">BMW</option>
-                                <option value="mb-benz">Mercedes-Benz</option>
-                                <option value="porsche">Porsche</option>
-                                <option value="chevy">Chevrolet</option>
-                                <option value="audi">Audi</option>
-                            </select>
-
-                            <label for="AutoModal">Модель Авто</label>
-                            <select
-                                    class="form-control"
-                                    id="AutoModal"
-                                    disabled
-                                    required
-                            >
-                                <option disabled value="0" selected>Оберіть модель авто...</option>
-                            </select>
+                        <div class="form-group mt-0">
+                            <div class="information-form__item mt-0">
+                                <label for="AutoBrand">Марка Авто</label>
+                                <select
+                                        class="form-control"
+                                        id="AutoBrand"
+                                        required
+                                >
+                                    <option disabled value="0" selected>Оберіть марку авто...</option>
+                                    <option value="bmw">BMW</option>
+                                    <option value="mb-benz">Mercedes-Benz</option>
+                                    <option value="porsche">Porsche</option>
+                                    <option value="chevy">Chevrolet</option>
+                                    <option value="audi">Audi</option>
+                                </select>
+                            </div>
+                            <div class="information-form__item">
+                                <label for="AutoModal">Модель Авто</label>
+                                <select
+                                        class="form-control"
+                                        id="AutoModal"
+                                        disabled
+                                        required
+                                >
+                                    <option disabled value="0" selected>Оберіть модель авто...</option>
+                                </select>
+                            </div>
                         </div>
-                        <button class="btn btn-primary" type="submit" id="js-submit-form">Submit form</button>
+                        <button class="btn btn-primary information-form__btn" type="submit" id="js-submit-form">Шукати</button>
                     </form>
                 </div>
                 <div class="col-12 col-md-6">

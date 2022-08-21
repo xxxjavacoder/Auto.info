@@ -1,0 +1,46 @@
+{
+  "automobiles": [
+    {
+      "name": "bmw",
+      "model": "7ser",
+      "id": "1",
+      "text": "BMW 7 series"
+    },
+    {
+      "name": "bmw",
+      "model": "5ser",
+      "id": "2",
+      "text": "BMW 5 series"
+    },
+    {
+      "name": "bmw",
+      "model": "3ser",
+      "id": "3",
+      "text": "BMW 3 series"
+    },
+    {
+      "name": "bmw",
+      "model": "x5",
+      "id": "4",
+      "text": "BMW X5"
+    },
+    {
+      "name": "bmw",
+      "model": "x7",
+      "id": "5",
+      "text": "BMW X7"
+    },
+    {
+      "name": "bmw",
+      "model": "m5",
+      "id": "6",
+      "text": "BMW M5"
+    },
+    {
+      "name": "bmw",
+      "model": "m3",
+      "id": "7",
+      "text": "BMW M3"
+    }
+  ]
+}

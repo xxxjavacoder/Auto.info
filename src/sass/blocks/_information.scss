@@ -1,12 +1,16 @@
-.information-form {
+.information {
   padding: 2rem 1rem 3rem 1rem;
 
-  &__item {
+  &__form-item {
     margin-top: 1rem;
   }
 
   &__btn {
     display: block;
     margin: 0 auto;
+  }
+
+  &__result {
+
   }
 }

@@ -19,7 +19,7 @@ $(document).ready(function() {
         ]
     });
 
-    $('#AutoModal').append("" +
+    $('#AutoModel').append("" +
         "<option brand='bmw' value='7ser'>7 Series</option>" +
         "<option brand='bmw' value='5ser'>5 Series</option>" +
         "<option brand='bmw' value='m5'>M5</option>" +
@@ -47,7 +47,7 @@ $(document).ready(function() {
     $('select#AutoBrand').change( function() {
         let auto_brand = $('select#AutoBrand option:checked').val();
 
-        $('#AutoModal').removeAttr('disabled');
+        $('#AutoModel').removeAttr('disabled');
 
         if(auto_brand === 'bmw') {
 
@@ -91,4 +91,61 @@ $(document).ready(function() {
 
         }
     })
+});
+
+window.addEventListener('DOMContentLoaded', () => {
+
+    function getData() {
+
+        getRessource("http://localhost:3000/automobiles")
+            .then(data => AddInfo(data))
+            .catch(err => console.error(err));
+    }
+
+    async function getRessource(url) {
+        const result = await fetch(`${url}`);
+
+        if(!result.ok) {
+            throw new Error(`Can't fetch ${url} endpoint. status: ${result.status}`)
+        } else {
+
+        }
+
+        return await result.json();
+    }
+
+    function checkAuto(automobiles) {
+        let brand = $("#AutoBrand").val();
+        let model = $("#AutoModel").val();
+
+        if(automobiles.name === brand && automobiles.model === model){
+            return automobiles;
+        }
+    }
+
+    function AddInfo(data) {
+        document.getElementById('AutoResult').innerHTML = "";
+
+
+        let response = document.createElement('div');
+        let automobile = data.find(checkAuto);
+
+        if(!automobile) {
+            response.innerHTML = `
+                <p>
+                    Наразі ми не маємо достатньо інформації про даний автомобіль, але ми працюємо над цим!
+                </p>
+            `;
+
+            document.querySelector("#AutoResult").appendChild(response);
+        }
+
+        response.innerHTML = `
+                       <p>${automobile.text}</p>
+                   `;
+
+        document.querySelector("#AutoResult").appendChild(response);
+    }
+
+    document.querySelector('#js-submit-form').addEventListener('click', getData);
 });
